@@ -1,7 +1,8 @@
 # AllCardsOnDeck
 
-ALGORITHM:
+PEDAC
 
+PROBLEM:
 Create a deck of cards
 Shuffle deck of cards
 Use Shuffle Yates Algorithm to shuffle the deck of cards
@@ -9,6 +10,7 @@ Display the two top cards as a string: "Ace of Spades"...
 52 cards made of suits and ranks
 4 suits and 13 ranks
 4x13 = 54
+
 EXAMPLE DATA:
 Ace of Clubs
 1 of Clubs
@@ -55,22 +57,22 @@ Jack of Spades
 Queen of Spades
 King of Spades
 
-Ace of Clovers
-1 of Clovers
-2 of Clovers
-3 of Clovers
-4 of Clovers
-5 of Clovers
-6 of Clovers
-7 of Clovers
-8 of Clovers
-9 of Clovers
-10 of Clovers
-Jack of Clovers
-Queen of Clovers
-King of Clovers
+Ace of Diamonds
+1 of Diamonds
+2 of Diamonds
+3 of Diamonds
+4 of Diamonds
+5 of Diamonds
+6 of Diamonds
+7 of Diamonds
+8 of Diamonds
+9 of Diamonds
+10 of Diamonds
+Jack of Diamonds
+Queen of Diamonds
+King of Diamonds
 
-Data structure:
+DATA STRUCTURE:
 string
 List
 Loops
@@ -86,6 +88,14 @@ HALF OF DECK IS GIVEN TO EACH
 EACH PLAYER REVEALS A CARD FROM THE TOP OF THEIR STACK
 OBJECTS WE WILL NEED
 PLAYER THAT RUNS OUT OF CARDS FIRST WINS
+-Make a list of the 4 suits
+-Make a list of the 13 ranks
+-Make a new list of strings named 'Deck'
+-Make a loop that goes through the list 'suits'
+-For Clubs:
+Make a loop that goes through all the ranks and call this list 'ranks'
+for each rank, make a new string of the form $"{Rank of Suit}" //nested loop
+add that newly formed string to the end of the deck list
 
 Algorithm A
 -Make a new list of strings named `deck`
@@ -107,3 +117,5 @@ Algorithm B
 
 There are four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
 There are 13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", and "King".
+
+CODE
