@@ -88,14 +88,6 @@ HALF OF DECK IS GIVEN TO EACH
 EACH PLAYER REVEALS A CARD FROM THE TOP OF THEIR STACK
 OBJECTS WE WILL NEED
 PLAYER THAT RUNS OUT OF CARDS FIRST WINS
--Make a list of the 4 suits
--Make a list of the 13 ranks
--Make a new list of strings named 'Deck'
--Make a loop that goes through the list 'suits'
--For Clubs:
-Make a loop that goes through all the ranks and call this list 'ranks'
-for each rank, make a new string of the form $"{Rank of Suit}" //nested loop
-add that newly formed string to the end of the deck list
 
 Algorithm A
 -Make a new list of strings named `deck`
@@ -115,7 +107,14 @@ deck[leftIndex] = rightCard
 
 Algorithm B
 
-There are four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
-There are 13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", and "King".
+-Make a list of the 4 suits
+-Make a list of the 13 ranks
+-Make a new list of strings named 'Deck'
+-Make a loop that goes through the list 'suits'
+-For Clubs:
+Make a loop that goes through all the ranks and call this list 'ranks'
+for each rank, make a new string of the form $"{Rank of Suit}" //nested loop
+add that newly formed string to the end of the deck list (so we constructed a deck of cards)
+Same as Algo A
 
 CODE
