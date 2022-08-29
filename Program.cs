@@ -7,12 +7,14 @@ namespace AllCardsOnDeck
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine("Welcome to All Cards On Deck.");
-            // //how many arrangements of 52 cards on a deck
+            Console.WriteLine("Welcome to All Cards On Deck.");
+            // //Arrangement of 52 cards on a deck
             // //permutation
+            //Possible considerations
             // //factorial n! = n x(n-1) x (n-2) x .... x 1
             // //52!
             // // 8 followed by 67 zeros
+
             // var deck = new List<string>();//deck object
             // var card = new List<string>(); //card object
             // var suits = new List<string>() { "Clubs", "Diamonds", "Hearts", "Spades" };
@@ -50,7 +52,7 @@ namespace AllCardsOnDeck
                     //displaying the cards each of the 52
                     var cards = $"{rank} of {suit}";
                     //printing the cards
-                    // Console.WriteLine($"and it's a: {cards}");
+                    Console.WriteLine($"and it's a: {cards}");
                     deck.Add(cards);
                     //this makes the loop go as many times as there are elements on the rank
                     // Console.WriteLine("\n");
@@ -80,6 +82,8 @@ namespace AllCardsOnDeck
                 // System.Console.WriteLine($"How many cards I have: {allCardsOnTheDeck}. \n");
             };
             Console.WriteLine("End of Shuffle");
+
+
 
 
         }
