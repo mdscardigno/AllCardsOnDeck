@@ -7,26 +7,95 @@ namespace AllCardsOnDeck
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to All Cards On Deck.");
-            // //Arrangement of 52 cards on a deck
-            // //permutation
-            //Possible considerations
-            // //factorial n! = n x(n-1) x (n-2) x .... x 1
-            // //52!
-            // // 8 followed by 67 zeros
+            //ALGORITHM A
+            //             var deck = new List<string>() {
+            // "Ace of Clubs",
+            // "1 of Clubs",
+            // "2 of Clubs",
+            // "3 of Clubs",
+            // "4 of Clubs",
+            // "5 of Clubs",
+            // "6 of Clubs",
+            // "7 of Clubs",
+            // "8 of Clubs",
+            // "9 of Clubs",
+            // "10 of Clubs",
+            // "Jack of Clubs",
+            // "Queen of Clubs",
+            // "King of Clubs",
+            // "Ace of Hearts",
+            // "1 of Hearts",
+            // "2 of Hearts",
+            // "3 of Hearts",
+            // "4 of Hearts",
+            // "5 of Hearts",
+            // "6 of Hearts",
+            // "7 of Hearts",
+            // "8 of Hearts",
+            // "9 of Hearts",
+            // "10 of Hearts",
+            // "Jack of Hearts",
+            // "Queen of Hearts",
+            // "King of Hearts",
+            // "Ace of Spades",
+            // "1 of Spades",
+            // "2 of Spades",
+            // "3 of Spades",
+            // "4 of Spades",
+            // "5 of Spades",
+            // "6 of Spades",
+            // "7 of Spades",
+            // "8 of Spades",
+            // "9 of Spades",
+            // "10 of Spades",
+            // "Jack of Spades",
+            // "Queen of Spades",
+            // "King of Spades",
+            // "Ace of Diamonds",
+            // "1 of Diamonds",
+            // "2 of Diamonds",
+            // "3 of Diamonds",
+            // "4 of Diamonds",
+            // "5 of Diamonds",
+            // "6 of Diamonds",
+            // "7 of Diamonds",
+            // "8 of Diamonds",
+            // "9 of Diamonds",
+            // "10 of Diamonds",
+            // "Jack of Diamonds",
+            // "Queen of Diamonds",
+            // "King of Diamonds"
+            // };
+            //             // numberOfCards = length of our deck
+            //             var numberOfCards = deck.Count;
+            //             // for rightIndex from numberOfCards - 1 down to 1 do:
+            //             for (var rightIndex = numberOfCards - 1; rightIndex >= 1; rightIndex--)
+            //             {
+            //                 // leftIndex = random integer that is greater than or equal to 0 and LESS than rightIndex. See the section "How do we get a random integer")
+            //                 var randomNumberGenerator = new Random();
+            //                 var leftIndex = randomNumberGenerator.Next(rightIndex);
+            //                 // Now swap the values at rightIndex and leftIndex by doing this:
+            //                 // leftCard = the value from deck[leftIndex]
+            //                 var leftCard = deck[leftIndex];
+            //                 // rightCard = the value from deck[rightIndex]
+            //                 var rightCard = deck[rightIndex];
+            //                 // deck[rightIndex] = leftCard
+            //                 deck[rightIndex] = leftCard;
+            //                 // deck[leftIndex] = rightCard
+            //                 deck[leftIndex] = rightCard;
+            //                 //first card = deck[0]
+            //                 var firstCard = deck[0];
+            //                 //second card = deck[1];
+            //                 var secondCard = deck[1];
+            //                 System.Console.WriteLine($"The first card is {firstCard}. \n");
+            //                 System.Console.WriteLine($"The second card is {secondCard}.\n");
+            //             }
 
-            // var deck = new List<string>();//deck object
-            // var card = new List<string>(); //card object
-            // var suits = new List<string>() { "Clubs", "Diamonds", "Hearts", "Spades" };
-            // var suitsLength = suits.Count;
-            // System.Console.WriteLine(suitsLength);
-            // var ranks = new List<string>() { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
-            // var ranksLength = ranks.Count;
-            // System.Console.WriteLine(ranksLength);
-            // //THERE ARE 52 CARDS
-            // //SUIT AND RANK
-            // // for each of the four suits
-            // //loop 13 times for said suit
+
+
+            //ALGO B
+
+            // Console.WriteLine("Welcome to All Cards On Deck.");
             // Requirements
             // create a deck variable as a list and initialize as empty
             var deck = new List<string>();
@@ -82,10 +151,6 @@ namespace AllCardsOnDeck
                 // System.Console.WriteLine($"How many cards I have: {allCardsOnTheDeck}. \n");
             };
             Console.WriteLine("End of Shuffle");
-
-
-
-
         }
     }
 }
