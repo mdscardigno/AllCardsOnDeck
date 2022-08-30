@@ -93,42 +93,87 @@ namespace AllCardsOnDeck
 
 
 
-            //ALGO B
+            // //ALGO B
 
-            // Console.WriteLine("Welcome to All Cards On Deck.");
-            // Requirements
-            // create a deck variable as a list and initialize as empty
-            var deck = new List<string>();
-            // create a card variable as a list and initialize as empty
-            var card = new List<string>();
-            // All cards should be represented as a string such as "Ace of Hearts"
-            // There are four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
+            // // Console.WriteLine("Welcome to All Cards On Deck.");
+            // // Requirements
+            // // create a deck variable as a list and initialize as empty
+            // var deck = new List<string>();
+            // // create a card variable as a list and initialize as empty
+            // var card = new List<string>();
+            // // All cards should be represented as a string such as "Ace of Hearts"
+            // // There are four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
+            // var suits = new List<string>() { "Clubs", "Diamonds", "Hearts", "Spades" };
+            // //length of suits
+            // var suitsLength = suits.Count;
+            // // There are 13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", and "King".
+            // var ranks = new List<string>() { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
+            // //length of ranks
+            // var ranksLength = ranks.Count;
+            // //these nested foreach loops is like having many loops but with a multiplication effect! :-0 DRY \0/
+            // //Make a loop that goes through the list of ranks
+            // foreach (var suit in suits)
+            // {
+            //     //Make a loop that goes through the list of ranks
+            //     // Console.WriteLine($"SuitsLength: {suitsLength}.");
+            //     foreach (var rank in ranks)
+            //     {
+            //         //displaying the cards each of the 52
+            //         var cards = $"{rank} of {suit}";
+            //         //printing the cards
+            //         // Console.WriteLine($"and it's a: {cards}");
+            //         deck.Add(cards);
+            //         //this makes the loop go as many times as there are elements on the rank
+            //         // Console.WriteLine("\n");
+            //     }
+            //     Console.Write($"Total of cards : {deck.Count} \n ");
+            //     // Console.WriteLine("Counting my suits and there are : " + deck.Count + " of them at this point.");
+            // };
+            // var allCardsOnTheDeck = deck.Count;
+            // //How do we shuffle?
+            // //for rightIndex from numberOfCards - 1 down to 1 do:
+            // for (var rightIndex = allCardsOnTheDeck - 1; rightIndex >= 1; rightIndex--)
+            // {
+            //     //leftIndex = random integer that is greater than or equal to 0 and LESS than rightIndex. 
+            //     var randomNumberGenerator = new Random();//using method Random
+            //     var leftIndex = randomNumberGenerator.Next(rightIndex);
+            //     // Now swap the values at rightIndex and leftIndex by doing this:
+            //     var leftCard = deck[leftIndex];
+            //     var rightCard = deck[rightIndex];
+            //     deck[rightIndex] = leftCard;
+            //     deck[leftIndex] = rightCard;
+            //     // After the deck is shuffled, display the top two cards.
+            //     //Showing firstCard
+            //     var firstCard = deck[0];
+            //     //Showing SecondCard
+            //     var secondCard = deck[1];
+            //     Console.WriteLine($"The first card is: {firstCard}, the second card is: {secondCard}.\n");
+            //     // System.Console.WriteLine($"How many cards I have: {allCardsOnTheDeck}. \n");
+            // };
+            // Console.WriteLine("End of Shuffle");
+            //****** Gavin Fancy Solution
+            //Make a list of the 4 suits and call this 'suits'
             var suits = new List<string>() { "Clubs", "Diamonds", "Hearts", "Spades" };
-            //length of suits
-            var suitsLength = suits.Count;
-            // There are 13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", and "King".
+            //Make a list of the 13 ranks and call this list 'ranks'
             var ranks = new List<string>() { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
-            //length of ranks
-            var ranksLength = ranks.Count;
-            //these nested foreach loops is like having many loops but with a multiplication effect! :-0 DRY \0/
-            //Make a loop that goes through the list of ranks
-            foreach (var suit in suits)
+            //Create a deck of cards by making a new list of strings and name that 'deck'
+            var deck = new List<string>();
+            //make a loop that goes through the list of suits
+            //use nested loop to build the deck
+            for (var deckCount = 0; deckCount < 6; deckCount++)
             {
-                //Make a loop that goes through the list of ranks
-                // Console.WriteLine($"SuitsLength: {suitsLength}.");
-                foreach (var rank in ranks)
+                foreach (var suit in suits)
                 {
-                    //displaying the cards each of the 52
-                    var cards = $"{rank} of {suit}";
-                    //printing the cards
-                    Console.WriteLine($"and it's a: {cards}");
-                    deck.Add(cards);
-                    //this makes the loop go as many times as there are elements on the rank
-                    // Console.WriteLine("\n");
+                    //make a loop that goes through the list of ranks
+                    foreach (var rank in ranks)
+                    {
+                        //for each rank, make a card of the form $"{rank} of {suit}"
+                        var card = $"{rank} of {suit}.";
+                        //add a newly formed string to the end of the deck
+                        deck.Add(card);
+                    }
                 }
-                Console.Write($"Total of cards : {deck.Count} \n ");
-                // Console.WriteLine("Counting my suits and there are : " + deck.Count + " of them at this point.");
-            };
+            }
             var allCardsOnTheDeck = deck.Count;
             //How do we shuffle?
             //for rightIndex from numberOfCards - 1 down to 1 do:
